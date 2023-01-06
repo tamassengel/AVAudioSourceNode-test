@@ -83,7 +83,7 @@ class Settings: ObservableObject {
         }
     }
 
-    // https://stackoverflow.com/a/63653883/3151675
+    // https://stackoverflow.com/a/75023273/3151675
     @discardableResult
     static func createWAV(pcmData: Data) -> Data? {
         var numChannels: CShort = 1
