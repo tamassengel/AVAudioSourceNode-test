@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1F2F136629646A2A001F6BDF /* SoundFontHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2F136529646A2A001F6BDF /* SoundFontHelper.m */; };
 		1F2F136A296471F2001F6BDF /* GMGSx.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 1F2F1369296470D0001F6BDF /* GMGSx.sf2 */; };
-		1FB331C92965A1850011BEF0 /* tone.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1FB331C82965A1850011BEF0 /* tone.wav */; };
 		1FB331D0296860A60011BEF0 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB331CF296860A60011BEF0 /* Settings.swift */; };
 		1FE9E311257D5C07007FE179 /* SwiftUIWatchOSTest WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1FE9E310257D5C07007FE179 /* SwiftUIWatchOSTest WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1FE9E317257D5C07007FE179 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FE9E315257D5C07007FE179 /* Interface.storyboard */; };
@@ -70,7 +69,6 @@
 		1F2F136729646F12001F6BDF /* SoundFontHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoundFontHelper.h; sourceTree = "<group>"; };
 		1F2F136829646F7D001F6BDF /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		1F2F1369296470D0001F6BDF /* GMGSx.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = GMGSx.sf2; sourceTree = "<group>"; };
-		1FB331C82965A1850011BEF0 /* tone.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tone.wav; sourceTree = "<group>"; };
 		1FB331CF296860A60011BEF0 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		1FE9E30C257D5C07007FE179 /* SwiftUIWatchOSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIWatchOSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FE9E310257D5C07007FE179 /* SwiftUIWatchOSTest WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUIWatchOSTest WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,18 +128,17 @@
 			isa = PBXGroup;
 			children = (
 				1FE9E32C257D5C0A007FE179 /* Assets.xcassets */,
-				1F2F1364296469EA001F6BDF /* tsf.h */,
+				1F2F136829646F7D001F6BDF /* BridgingHeader.h */,
 				1FE9E326257D5C0A007FE179 /* ContentView.swift */,
 				1FE9E328257D5C0A007FE179 /* ExtensionDelegate.swift */,
+				1F2F1369296470D0001F6BDF /* GMGSx.sf2 */,
 				1FE9E324257D5C0A007FE179 /* HostingController.swift */,
+				1FE9E331257D5C0A007FE179 /* Info.plist */,
+				1FE9E32E257D5C0A007FE179 /* Preview Content */,
+				1FB331CF296860A60011BEF0 /* Settings.swift */,
 				1F2F136729646F12001F6BDF /* SoundFontHelper.h */,
 				1F2F136529646A2A001F6BDF /* SoundFontHelper.m */,
-				1FE9E331257D5C0A007FE179 /* Info.plist */,
-				1FB331C82965A1850011BEF0 /* tone.wav */,
-				1FE9E32E257D5C0A007FE179 /* Preview Content */,
-				1F2F136829646F7D001F6BDF /* BridgingHeader.h */,
-				1F2F1369296470D0001F6BDF /* GMGSx.sf2 */,
-				1FB331CF296860A60011BEF0 /* Settings.swift */,
+				1F2F1364296469EA001F6BDF /* tsf.h */,
 			);
 			path = "SwiftUIWatchOSTest WatchKit Extension";
 			sourceTree = "<group>";
@@ -271,7 +268,6 @@
 			files = (
 				1FE9E330257D5C0A007FE179 /* Preview Assets.xcassets in Resources */,
 				1FE9E32D257D5C0A007FE179 /* Assets.xcassets in Resources */,
-				1FB331C92965A1850011BEF0 /* tone.wav in Resources */,
 				1F2F136A296471F2001F6BDF /* GMGSx.sf2 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
