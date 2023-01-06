@@ -6,6 +6,7 @@
 
 tsf *tinySoundFont;
 
+// https://stackoverflow.com/a/7569010/3151675
 + (instancetype)sharedInstance
 {
     static SoundFontHelper *sharedInstance = nil;
