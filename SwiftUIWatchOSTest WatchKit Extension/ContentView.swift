@@ -1,21 +1,26 @@
-//
-//  ContentView.swift
-//  SwiftUIWatchOSTest WatchKit Extension
-//
-//  Created by Sengel Tamás on 12/6/20.
-//
-
 import SwiftUI
+import AVFoundation
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, World!")
-            .padding()
-    }
-}
+    @ObservedObject var settings = Settings.shared
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    init() {
+        settings.engine = .init()
+
+        settings.prepare()
+    }
+
+    var body: some View {
+        Button("Play Sound") {
+            SoundFontHelper.sharedInstance().playSound()
+
+            if !settings.engine.isRunning {
+                do {
+                    try settings.engine.start()
+                } catch {
+                    print(error)
+                }
+            }
+        }
     }
 }
