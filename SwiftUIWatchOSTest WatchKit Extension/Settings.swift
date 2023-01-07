@@ -6,8 +6,7 @@ class Settings: ObservableObject {
 
     var engine: AVAudioEngine!
     var sourceNode: AVAudioSourceNode!
-    var wavData: Data!
-
+    
     func prepare() {
         if let sourceNode = sourceNode {
             engine.detach(sourceNode)
