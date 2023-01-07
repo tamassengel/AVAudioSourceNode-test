@@ -6,11 +6,15 @@ class Settings: ObservableObject {
 
     var engine: AVAudioEngine!
     var sourceNode: AVAudioSourceNode!
-    
+
     func prepare() {
-        if let sourceNode = sourceNode {
+
+        if let engine = engine,
+           let sourceNode = sourceNode {
             engine.detach(sourceNode)
         }
+
+        engine = .init()
 
         let mixerNode = engine.mainMixerNode
 

@@ -5,8 +5,6 @@ struct ContentView: View {
     @ObservedObject var settings = Settings.shared
 
     init() {
-        settings.engine = .init()
-
         settings.prepare()
     }
 
