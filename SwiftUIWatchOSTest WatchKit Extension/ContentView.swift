@@ -10,7 +10,7 @@ struct ContentView: View {
 
     var body: some View {
         Button("Play Sound") {
-            SoundFontHelper.sharedInstance().playSound()
+            Settings.shared.playSound()
 
             if !settings.engine.isRunning {
                 do {

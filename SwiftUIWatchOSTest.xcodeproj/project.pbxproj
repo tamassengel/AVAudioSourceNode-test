@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F2F136629646A2A001F6BDF /* SoundFontHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2F136529646A2A001F6BDF /* SoundFontHelper.m */; };
 		1F2F136A296471F2001F6BDF /* GMGSx.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 1F2F1369296470D0001F6BDF /* GMGSx.sf2 */; };
 		1FB331D0296860A60011BEF0 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB331CF296860A60011BEF0 /* Settings.swift */; };
 		1FB331D2296863A90011BEF0 /* licenses.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1FB331D1296863A90011BEF0 /* licenses.txt */; };
+		1FB331D4296B088D0011BEF0 /* tsf.c in Sources */ = {isa = PBXBuildFile; fileRef = 1FB331D3296B088D0011BEF0 /* tsf.c */; };
 		1FE9E311257D5C07007FE179 /* SwiftUIWatchOSTest WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1FE9E310257D5C07007FE179 /* SwiftUIWatchOSTest WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1FE9E317257D5C07007FE179 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FE9E315257D5C07007FE179 /* Interface.storyboard */; };
 		1FE9E319257D5C09007FE179 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FE9E318257D5C09007FE179 /* Assets.xcassets */; };
@@ -66,12 +66,11 @@
 
 /* Begin PBXFileReference section */
 		1F2F1364296469EA001F6BDF /* tsf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tsf.h; sourceTree = "<group>"; };
-		1F2F136529646A2A001F6BDF /* SoundFontHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoundFontHelper.m; sourceTree = "<group>"; };
-		1F2F136729646F12001F6BDF /* SoundFontHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoundFontHelper.h; sourceTree = "<group>"; };
 		1F2F136829646F7D001F6BDF /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		1F2F1369296470D0001F6BDF /* GMGSx.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = GMGSx.sf2; sourceTree = "<group>"; };
 		1FB331CF296860A60011BEF0 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		1FB331D1296863A90011BEF0 /* licenses.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = licenses.txt; sourceTree = "<group>"; };
+		1FB331D3296B088D0011BEF0 /* tsf.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tsf.c; sourceTree = "<group>"; };
 		1FE9E30C257D5C07007FE179 /* SwiftUIWatchOSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIWatchOSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FE9E310257D5C07007FE179 /* SwiftUIWatchOSTest WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUIWatchOSTest WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FE9E316257D5C07007FE179 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -139,9 +138,8 @@
 				1FB331D1296863A90011BEF0 /* licenses.txt */,
 				1FE9E32E257D5C0A007FE179 /* Preview Content */,
 				1FB331CF296860A60011BEF0 /* Settings.swift */,
-				1F2F136729646F12001F6BDF /* SoundFontHelper.h */,
-				1F2F136529646A2A001F6BDF /* SoundFontHelper.m */,
 				1F2F1364296469EA001F6BDF /* tsf.h */,
+				1FB331D3296B088D0011BEF0 /* tsf.c */,
 			);
 			path = "SwiftUIWatchOSTest WatchKit Extension";
 			sourceTree = "<group>";
@@ -284,8 +282,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FE9E327257D5C0A007FE179 /* ContentView.swift in Sources */,
-				1F2F136629646A2A001F6BDF /* SoundFontHelper.m in Sources */,
 				1FE9E325257D5C0A007FE179 /* HostingController.swift in Sources */,
+				1FB331D4296B088D0011BEF0 /* tsf.c in Sources */,
 				1FE9E329257D5C0A007FE179 /* ExtensionDelegate.swift in Sources */,
 				1FB331D0296860A60011BEF0 /* Settings.swift in Sources */,
 			);

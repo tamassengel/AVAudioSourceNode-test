@@ -7,8 +7,17 @@ class Settings: ObservableObject {
     var engine: AVAudioEngine!
     var sourceNode: AVAudioSourceNode!
 
-    func prepare() {
+    var tinySoundFont: OpaquePointer!
 
+    func prepare() {
+        let soundFontPath = Bundle.main.path(forResource: "GMGSx", ofType: "sf2")
+        tinySoundFont = tsf_load_filename(soundFontPath)
+        tsf_set_output(tinySoundFont, TSF_MONO, 44100, 0)
+
+        setUpSound()
+    }
+
+    func setUpSound() {
         if let engine = engine,
            let sourceNode = sourceNode {
             engine.detach(sourceNode)
@@ -30,7 +39,7 @@ class Settings: ObservableObject {
         }
 
         sourceNode = AVAudioSourceNode(format: audioFormat) { silence, timeStamp, frameCount, audioBufferList in
-            guard let data = SoundFontHelper.sharedInstance().getSound(Int32(frameCount)) else {
+            guard let data = self.getSound(length: Int(frameCount)) else {
                 return 1
             }
 
@@ -59,5 +68,22 @@ class Settings: ObservableObject {
         } catch {
             print(error)
         }
+    }
+
+    func playSound() {
+        tsf_note_on(tinySoundFont, 0, 60, 1)
+    }
+
+    func getSound(length: Int) -> Data? {
+        let array = [Int16]()
+        var storage = UnsafeMutablePointer<Int16>.allocate(capacity: length)
+        storage.initialize(from: array, count: length)
+
+        tsf_render_short(tinySoundFont, storage, Int32(length), 0)
+        let data = Data(bytes: storage, count: length)
+
+        storage.deallocate()
+
+        return data
     }
 }
